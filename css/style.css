@@ -73,7 +73,7 @@ h1, h2, h3, .mempelai-name, .closing-logo { font-family: 'Cormorant Garamond', s
 .couple-card { background: #FFF; border: 1px solid var(--rose-soft); border-radius: 8px; padding: 2.5rem 1.5rem; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.02); }
 .mempelai-name { font-size: 2.5rem; color: var(--text-dark); }
 .anak-ke { font-size: 0.8rem; text-transform: uppercase; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 1.5rem; }
-.ortu-info { font-size: 0.75rem; color: var(--text-mid); font-style: italic; }
+.ortu-label { font-size: 0.75rem; color: var(--text-mid); font-style: italic; }
 .ortu-name { font-size: 1rem; color: var(--text-dark); font-weight: 400; }
 
 /* 4. Quote Section */
@@ -93,14 +93,14 @@ h1, h2, h3, .mempelai-name, .closing-logo { font-family: 'Cormorant Garamond', s
 .d-year { font-size: 1rem; color: var(--rose-light); }
 .day-text { font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.15em; color: var(--gold-light); margin-bottom: 2rem; }
 .time-hours { font-size: 1.2rem; color: #FFF; margin-bottom: 0.2rem; }
-.address-sub { font-size: 0.85rem; color: var(--rose-soft); padding: 0 0.5rem; }
+.address-sub { font-size: 0.85rem; color: var(--rose-soft); }
 
 .countdown-container { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; }
 .countdown-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; width: 68px; height: 68px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .time-num { font-size: 1.4rem; color: var(--gold-light); font-weight: 400; }
 .time-label { font-size: 0.65rem; text-transform: uppercase; color: var(--rose-soft); }
 
-/* RSVP & Comment Box CSS */
+/* NEW: RSVP & Comment Board Box CSS */
 .rsvp-card { background: #FFF; border: 1px solid var(--rose-soft); border-radius: 8px; padding: 2rem 1.25rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02); margin-bottom: 2.5rem; }
 .form-group { margin-bottom: 1.25rem; display: flex; flex-direction: column; text-align: left; }
 .form-group label { font-size: 0.85rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.4rem; }
@@ -119,11 +119,11 @@ h1, h2, h3, .mempelai-name, .closing-logo { font-family: 'Cormorant Garamond', s
 .comment-companion { font-size: 0.75rem; color: var(--gold); font-style: italic; margin-top: 2px; }
 .comment-item-placeholder { font-size: 0.85rem; text-align: center; color: var(--text-mid); padding: 2rem 0; }
 
-/* Premium Bank Visual Widget */
-.digital-card { background: linear-gradient(135deg, #0056B3 0%, #002D62 100%); width: 100%; max-width: 340px; margin: 1.5rem auto; border-radius: 12px; padding: 1.5rem; text-align: left; color: #FFF; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1); overflow: hidden; }
+/* NEW: Premium DANA Wallet Widget */
+.digital-card { background: linear-gradient(135deg, #1078E6 0%, #0056B3 100%); width: 100%; max-width: 340px; margin: 1.5rem auto; border-radius: 12px; padding: 1.5rem; text-align: left; color: #FFF; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1); overflow: hidden; }
 .digital-card::after { content: ''; position: absolute; right: -20px; bottom: -20px; width: 120px; height: 120px; background: rgba(255,255,255,0.05); border-radius: 50%; }
 .card-brand { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
-.wallet-name { font-weight: 800; font-size: 1.4rem; letter-spacing: 0.05em; color: #FFF; }
+.wallet-name { font-weight: 800; font-size: 1.4rem; letter-spacing: 0.05em; font-italic: italic; color: #FFF; }
 .wallet-logo-sub { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.8; }
 .card-chip { width: 38px; height: 28px; background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%); border-radius: 4px; margin-bottom: 1.25rem; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2); }
 .card-number { font-size: 1.4rem; font-weight: 500; letter-spacing: 0.12em; font-family: monospace; margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
@@ -132,9 +132,9 @@ h1, h2, h3, .mempelai-name, .closing-logo { font-family: 'Cormorant Garamond', s
 .btn-copy-card:hover { background: rgba(255,255,255,0.35); }
 .copy-toast { display: none; background: rgba(0,0,0,0.8); color: #FFF; padding: 0.6rem 1.2rem; font-size: 0.85rem; border-radius: 20px; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
 
-/* Lokasi & Closing */
+/* 7. Lokasi & 8. Closing */
 .location-title { font-size: 2.2rem; color: var(--text-dark); margin: 0.3rem 0; }
-.address-text { font-size: 0.85rem; color: var(--text-mid); max-width: 440px; margin: 0 auto 1.5rem auto; padding: 0 0.5rem; }
+.address-text { font-size: 0.85rem; color: var(--text-mid); max-width: 380px; margin: 0 auto 2rem auto; }
 .map-wrapper { border-radius: 8px; overflow: hidden; border: 1px solid var(--rose-soft); box-shadow: 0 4px 15px rgba(0,0,0,0.02); height: 260px; }
 .map-wrapper iframe { height: 100%; width: 100%; }
 
