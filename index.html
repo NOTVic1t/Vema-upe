@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan: Vema & Ambo</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Audio Element -->
+    <audio id="weddingMusic" src="assets/music/a-thousand-years.mp3" loop></audio>
+
+    <!-- Visual Effects Canvas Layers -->
+    <div class="fx-container">
+        <canvas id="sparkleCanvas"></canvas>
+        <canvas id="petalCanvas"></canvas>
+    </div>
+
+    <!-- 1. Opening Screen -->
+    <section id="opening-screen" class="opening-screen">
+        <div class="glowing-orb orb-1"></div>
+        <div class="glowing-orb orb-2"></div>
+        
+        <div class="opening-content">
+            <span class="op-label reveal-up rd1">KEPADA YTH. BAPAK / IBU / SAUDARA/I</span>
+            <h1 class="op-title reveal-up rd2">Vemawati <br><span class="and-char">&</span><br> Ambo Upe</h1>
+            <div class="op-divider reveal-up rd3"></div>
+            <p class="op-date reveal-up rd3">15 · 06 · 2026</p>
+            <button id="btn-open-invitation" class="btn btn-gold reveal-up rd4">
+                <span>✦ Buka Undangan ✦</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Content Wrapper -->
+    <main id="main-content" class="main-content h-hide">
+
+        <!-- Floating Music Control -->
+        <button id="music-control" class="music-control-btn hidden" aria-label="Toggle Music">
+            <span class="music-icon">♫</span>
+        </button>
+
+        <!-- Bottom Navigation Bar -->
+        <nav class="bottom-nav hidden">
+            <a href="#hero" class="nav-item active" data-section="hero">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Home</span>
+            </a>
+            <a href="#couple" class="nav-item" data-section="couple">
+                <span class="nav-icon">💑</span>
+                <span class="nav-label">Couple</span>
+            </a>
+            <a href="#event" class="nav-item" data-section="event">
+                <span class="nav-icon">📅</span>
+                <span class="nav-label">Acara</span>
+            </a>
+            <a href="#rsvp-section" class="nav-item" data-section="rsvp-section">
+                <span class="nav-icon">✍️</span>
+                <span class="nav-label">RSVP</span>
+            </a>
+        </nav>
+
+        <!-- 2. Hero Section -->
+        <section id="hero" class="hero-section dark-bg">
+            <div class="corner-decoration top-left"></div>
+            <div class="corner-decoration top-right"></div>
+            <div class="corner-decoration bottom-left"></div>
+            <div class="corner-decoration bottom-right"></div>
+            
+            <div class="hero-wrapper">
+                <p class="bismillah scroll-reveal rd1">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+                <p class="hero-sub scroll-reveal rd2">THE WEDDING OF</p>
+                <h2 class="hero-title scroll-reveal rd3">Vemawati & Ambo Upe</h2>
+                <div class="hero-divider scroll-reveal rd3"></div>
+                <p class="hero-date scroll-reveal rd4">Senin, 15 Juni 2026</p>
+                
+                <div class="scroll-indicator scroll-reveal rd4">
+                    <span class="mouse-wheel"></span>
+                    <p>Scroll Down</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Couple Section -->
+        <section id="couple" class="couple-section light-bg">
+            <div class="subtle-pattern"></div>
+            <div class="container">
+                <div class="section-intro text-center scroll-reveal rd1">
+                    <p class="label-caps">Mempelai</p>
+                    <p class="section-desc">Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Dengan memohon rahmat dan rida-Mu, kami bermaksud menyelenggarakan pernikahan kami:</p>
+                </div>
+
+                <div class="couple-cards">
+                    <div class="couple-card scroll-reveal rd2">
+                        <div class="card-inner">
+                            <h3 class="mempelai-name">Vemawati</h3>
+                            <p class="anak-ke">Putri Pertama</p>
+                            <div class="ortu-info">
+                                <p class="ortu-label">Putri dari Pasangan</p>
+                                <p class="ortu-name">Bapak Lukman & Ibu Irmawati</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="couple-card scroll-reveal rd3">
+                        <div class="card-inner">
+                            <h3 class="mempelai-name">Ambo Upe</h3>
+                            <p class="anak-ke">Putra Ketiga</p>
+                            <div class="ortu-info">
+                                <p class="ortu-label">Putra dari Pasangan</p>
+                                <p class="ortu-name">Bapak Samsu & Ibu Zubeda</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Romantic Quote Section -->
+        <section class="quote-section dark-bg">
+            <div class="quote-glow-bg"></div>
+            <div class="quote-container floating-anim">
+                <p class="quote-text">"I have loved you for a thousand years, I'll love you for a thousand more."</p>
+                <p class="quote-author">— Christina Perri</p>
+            </div>
+        </section>
+
+        <!-- 5. Acara / Event Section & Countdown -->
+        <section id="event" class="event-section dark-bg">
+            <div class="container">
+                <div class="event-box scroll-reveal rd1">
+                    <div class="corner-decoration top-left"></div>
+                    <div class="corner-decoration top-right"></div>
+                    <div class="corner-decoration bottom-left"></div>
+                    <div class="corner-decoration bottom-right"></div>
+
+                    <p class="label-caps color-gold">WAKTU & TEMPAT PELAKSANAAN</p>
+                    
+                    <div class="date-huge-container">
+                        <div class="date-line"></div>
+                        <div class="date-huge">15</div>
+                        <div class="date-month-year">
+                            <span class="d-month">JUNI</span>
+                            <span class="d-year">2026</span>
+                        </div>
+                        <div class="date-line"></div>
+                    </div>
+                    <p class="day-text">HARI SENIN</p>
+
+                    <div class="event-details">
+                        <div class="event-time-block">
+                            <h4>AKAD & RESEPSI Pernikahan</h4>
+                            <p class="time-hours">10.00 WIB — Selesai</p>
+                            <p class="address-sub">Dusun IX (Gang Becek), RT/RW 033/017, Kuala Penet, Margasari, Kec. Labuhan Maringgai, Lampung Timur</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="countdown-wrapper scroll-reveal rd2">
+                    <p class="countdown-title">Menuju Hari Bahagia</p>
+                    <div id="countdown" class="countdown-container">
+                        <div class="countdown-box"><span id="days" class="time-num">00</span><span class="time-label">Hari</span></div>
+                        <div class="countdown-box"><span id="hours" class="time-num">00</span><span class="time-label">Jam</span></div>
+                        <div class="countdown-box"><span id="minutes" class="time-num">00</span><span class="time-label">Menit</span></div>
+                        <div class="countdown-box"><span id="seconds" class="time-num">00</span><span class="time-label">Detik</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. RSVP Form & Live Comments Section -->
+        <section id="rsvp-section" class="rsvp-section light-bg">
+            <div class="container">
+                <div class="section-intro text-center scroll-reveal rd1">
+                    <p class="label-caps">Kehadiran & Ucapan</p>
+                    <p class="section-desc">Silakan konfirmasi kehadiran Anda dan berikan ucapan selamat kepada kedua mempelai.</p>
+                </div>
+
+                <!-- Form Card -->
+                <div class="rsvp-card scroll-reveal rd2">
+                    <form id="google-rsvp-form">
+                        <div class="form-group">
+                            <label for="nama-input">Nama Tamu</label>
+                            <input type="text" id="nama-input" placeholder="Masukkan nama Anda..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="kehadiran-select">Konfirmasi Kehadiran</label>
+                            <select id="kehadiran-select" required>
+                                <option value="" disabled selected>Pilih Opsi Kehadiran...</option>
+                                <option value="Hadir">Hadir</option>
+                                <option value="Tidak Hadir">Tidak Hadir</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="datang-select">Datang Sama Siapa?</label>
+                            <select id="datang-select" required>
+                                <option value="" disabled selected>Pilih Kategori...</option>
+                                <option value="Sendiri">Sendiri</option>
+                                <option value="Pasangan">Pasangan (2 Orang)</option>
+                                <option value="Keluarga">Keluarga</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ucapan-textarea">Ucapan & Doa Restu</label>
+                            <textarea id="ucapan-textarea" rows="4" placeholder="Tulis ucapan tulus Anda di sini..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-gold w-100">
+                            <span>Kirim Konfirmasi ✦</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Live Comments List -->
+                <div class="comments-wrapper scroll-reveal rd3">
+                    <div class="comments-header">
+                        <span class="comments-count"><b id="total-ucapan">0</b> Ucapan</span>
+                        <span class="attendance-count"><b id="total-hadir">0</b> Orang Hadir</span>
+                    </div>
+                    <div id="comments-container" class="comments-container">
+                        <div class="comment-item-placeholder">Memuat daftar ucapan...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Titip Hadiah / Digital Gift Card Section -->
+        <section id="gift-section" class="gift-section dark-bg">
+            <div class="container text-center">
+                <div class="section-intro scroll-reveal rd1">
+                    <p class="label-caps color-gold">Titip Hadiah</p>
+                    <p class="section-desc color-cream">Doa restu Bapak/Ibu sekalian merupakan karunia yang sangat berarti bagi kami. Dan jika memberi merupakan ungkapan tanda kasih, kado dapat dikirim secara cashless.</p>
+                </div>
+
+                <!-- Bank BRI Wallet Card Visual -->
+                <div class="digital-card scroll-reveal rd2">
+                    <div class="card-brand">
+                        <span class="wallet-name">BANK BRI</span>
+                        <span class="wallet-logo-sub">Transfer Bank</span>
+                    </div>
+                    <div class="card-chip"></div>
+                    <div class="card-number" id="card-num-text">8081 0101 2496 530</div>
+                    <div class="card-holder">FEMAWATI</div>
+                    <button class="btn-copy-card" onclick="copyCardNumber()">📋 Salin Nomor</button>
+                </div>
+                <div id="copy-toast" class="copy-toast">Nomor Rekening BRI berhasil disalin!</div>
+            </div>
+        </section>
+
+        <!-- 8. Lokasi Section -->
+        <section id="location" class="location-section light-bg">
+            <div class="container">
+                <div class="section-intro text-center scroll-reveal rd1">
+                    <p class="label-caps">LOKASI ACARA</p>
+                    <h3 class="location-title">Kuala Penet</h3>
+                    <p class="address-text">Dusun IX (Gang Becek), RT/RW 033/017, Kuala Penet, Margasari, Kec. Labuhan Maringgai, Lampung Timur</p>
+                    <a href="https://maps.app.goo.gl/bLnnoVdVwBhbga2J6?g_st=ac" target="_blank" class="btn btn-gold" style="margin-top: 0.5rem; text-decoration: none;">
+                        <span>🗺️ Buka Google Maps</span>
+                    </a>
+                </div>
+
+                <div class="map-wrapper scroll-reveal rd2">
+                    <iframe 
+                        src="https://maps.app.goo.gl/bLnnoVdVwBhbga2J6?g_st=ac" 
+                        width="100%" 
+                        height="320" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Closing Section -->
+        <section class="closing-section dark-bg">
+            <div class="container text-center">
+                <p class="closing-thank scroll-reveal rd1">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.</p>
+                <h2 class="closing-logo scroll-reveal rd2">Vema & Ambo</h2>
+                <p class="keluarga scroll-reveal rd3">Beserta Keluarga</p>
+                
+                <div class="footer-credit scroll-reveal rd4">
+                    <p>© 2026 Vema & Ambo Wedding. All Rights Reserved.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- External JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
