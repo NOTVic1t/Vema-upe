@@ -1,1 +1,169 @@
+/* CSS Premium Update - Dark & Gold Elegant */
+:root {
+    --rose-dark:   #290614;
+    --rose-mid:    #421123;
+    --rose:        #BA6B80;
+    --rose-light:  #E3A7B6;
+    --rose-soft:   #F0CCD4;
+    --gold:        #D4AF37;
+    --gold-light:  #F3E5AB;
+    --white:       #FFFDFD;
+    --text-dark:   #3A1A25;
+    --text-mid:    #693B4B;
+    --cream-bg:    #FCF8F6;
+    --bezier-premium: cubic-bezier(0.16, 1, 0.3, 1);
+}
 
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: 'Jost', sans-serif; background-color: var(--rose-dark); color: var(--text-dark); overflow-x: hidden; line-height: 1.6; }
+
+.container { width: 100%; max-width: 600px; margin: 0 auto; padding: 3.5rem 1.25rem; }
+.text-center { text-align: center; }
+.h-hide { display: none !important; }
+.w-100 { width: 100%; }
+.color-gold { color: var(--gold) !important; }
+.color-cream { color: var(--gold-light) !important; }
+
+/* Effects Canvas Layer */
+.fx-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 10; }
+#sparkleCanvas, #petalCanvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* Headings Typo */
+h1, h2, h3, .mempelai-name, .closing-logo { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
+.label-caps { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.15em; font-size: 0.85rem; margin-bottom: 0.8rem; }
+
+.dark-bg { background: linear-gradient(135deg, var(--rose-dark) 0%, var(--rose-mid) 100%); color: #FFF3F6; }
+.light-bg { background-color: var(--cream-bg); color: var(--text-dark); }
+
+/* Buttons Style */
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.9rem 2rem; font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.1em; font-weight: 600; text-transform: uppercase; border: none; cursor: pointer; border-radius: 6px; transition: all 0.4s var(--bezier-premium); position: relative; z-index: 5; }
+.btn-gold { background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%); color: #FFF; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25); }
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4); }
+
+/* Corner Decorations */
+.corner-decoration { position: absolute; width: 25px; height: 25px; border: 1px solid var(--gold); pointer-events: none; opacity: 0.5; }
+.top-left { top: 15px; left: 15px; border-right: none; border-bottom: none; }
+.top-right { top: 15px; right: 15px; border-left: none; border-bottom: none; }
+.bottom-left { bottom: 15px; left: 15px; border-right: none; border-top: none; }
+.bottom-right { bottom: 15px; right: 15px; border-left: none; border-top: none; }
+
+/* 1. Opening Screen */
+.opening-screen { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #1B020C; z-index: 100; display: flex; align-items: center; justify-content: center; text-align: center; transition: opacity 1s var(--bezier-premium), visibility 1s var(--bezier-premium); }
+.opening-screen.fade-out { opacity: 0; visibility: hidden; }
+.opening-content { width: 100%; max-width: 450px; padding: 1.5rem; }
+.op-label { color: var(--rose-light); letter-spacing: 0.15em; font-size: 0.75rem; margin-bottom: 1.5rem; display: block; }
+.op-title { font-size: 3rem; color: #FFF; line-height: 1.2; }
+.and-char { font-style: italic; color: var(--gold); font-size: 2.2rem; }
+.op-divider { width: 50px; height: 1px; background: var(--gold); margin: 1.5rem auto; }
+.op-date { font-family: 'Cinzel', serif; color: var(--gold-light); font-size: 1rem; letter-spacing: 0.25em; margin-bottom: 2.5rem; }
+
+/* 2. Hero Section */
+.hero-section { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.bismillah { font-size: 1.6rem; color: var(--gold-light); margin-bottom: 1rem; }
+.hero-sub { font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.25em; color: var(--rose-light); }
+.hero-title { font-size: 3rem; color: #FFF; margin: 0.5rem 0; }
+.hero-divider { width: 80px; height: 1px; background: var(--gold); margin: 1.5rem auto; }
+.hero-date { font-family: 'Cinzel', serif; font-size: 0.95rem; letter-spacing: 0.15em; color: var(--gold-light); }
+
+/* 3. Couple Section */
+.section-intro { margin-bottom: 3rem; }
+.section-desc { font-size: 0.9rem; color: var(--text-mid); max-width: 420px; margin: 0 auto; }
+.couple-cards { display: flex; flex-direction: column; gap: 2rem; }
+.couple-card { background: #FFF; border: 1px solid var(--rose-soft); border-radius: 8px; padding: 2.5rem 1.5rem; text-align: center; box-shadow: 0 6px 20px rgba(0,0,0,0.02); }
+.mempelai-name { font-size: 2.5rem; color: var(--text-dark); }
+.anak-ke { font-size: 0.8rem; text-transform: uppercase; color: var(--gold); letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+.ortu-info { font-size: 0.75rem; color: var(--text-mid); font-style: italic; }
+.ortu-name { font-size: 1rem; color: var(--text-dark); font-weight: 400; }
+
+/* 4. Quote Section */
+.quote-section { padding: 6rem 1.5rem; text-align: center; position: relative; }
+.quote-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.75rem; color: #FFEBF0; line-height: 1.4; margin-bottom: 1rem; }
+.quote-author { font-size: 0.8rem; letter-spacing: 0.1em; color: var(--gold-light); }
+.floating-anim { animation: floatV 5s ease-in-out infinite; }
+@keyframes floatV { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+/* 5. Event & Countdown */
+.event-box { background: rgba(41, 6, 20, 0.5); border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 8px; padding: 3rem 1.5rem; text-align: center; position: relative; margin-bottom: 3rem; }
+.date-huge-container { display: flex; align-items: center; justify-content: center; gap: 1rem; margin: 1.5rem 0 0.5rem 0; }
+.date-line { width: 35px; height: 1px; background: var(--gold); }
+.date-huge { font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; color: var(--gold); line-height: 1; }
+.date-month-year { display: flex; flex-direction: column; align-items: flex-start; }
+.d-month { font-family: 'Cinzel', serif; font-size: 1.2rem; color: #FFF; }
+.d-year { font-size: 1rem; color: var(--rose-light); }
+.day-text { font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.15em; color: var(--gold-light); margin-bottom: 2rem; }
+.time-hours { font-size: 1.2rem; color: #FFF; margin-bottom: 0.2rem; }
+.address-sub { font-size: 0.85rem; color: var(--rose-soft); padding: 0 0.5rem; }
+
+.countdown-container { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; }
+.countdown-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; width: 68px; height: 68px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.time-num { font-size: 1.4rem; color: var(--gold-light); font-weight: 400; }
+.time-label { font-size: 0.65rem; text-transform: uppercase; color: var(--rose-soft); }
+
+/* RSVP & Comment Box CSS */
+.rsvp-card { background: #FFF; border: 1px solid var(--rose-soft); border-radius: 8px; padding: 2rem 1.25rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02); margin-bottom: 2.5rem; }
+.form-group { margin-bottom: 1.25rem; display: flex; flex-direction: column; text-align: left; }
+.form-group label { font-size: 0.85rem; font-weight: 500; color: var(--text-dark); margin-bottom: 0.4rem; }
+.form-group input, .form-group select, .form-group textarea { padding: 0.75rem; border: 1px solid #DCD0D4; border-radius: 4px; font-family: 'Jost', sans-serif; font-size: 0.9rem; color: var(--text-dark); background-color: #FFF; transition: border-color 0.3s; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--rose); }
+
+.comments-wrapper { text-align: left; }
+.comments-header { display: flex; justify-content: space-between; font-size: 0.85rem; border-bottom: 1px solid var(--rose-soft); padding-bottom: 0.5rem; margin-bottom: 1rem; color: var(--text-mid); }
+.comments-container { max-height: 320px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem; padding-right: 4px; }
+.comment-item { background: #FFF; border-left: 3px solid var(--rose); padding: 0.85rem; border-radius: 0 6px 6px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.01); }
+.comment-meta { display: flex; justify-content: space-between; margin-bottom: 0.3rem; }
+.comment-name { font-weight: 500; font-size: 0.9rem; color: var(--text-dark); }
+.comment-badge { font-size: 0.7rem; padding: 2px 6px; background-color: #E2FFF0; color: #15803D; border-radius: 4px; font-weight: 500; }
+.comment-badge.absent { background-color: #FEE2E2; color: #991B1B; }
+.comment-text { font-size: 0.85rem; color: #555; word-break: break-word; }
+.comment-companion { font-size: 0.75rem; color: var(--gold); font-style: italic; margin-top: 2px; }
+.comment-item-placeholder { font-size: 0.85rem; text-align: center; color: var(--text-mid); padding: 2rem 0; }
+
+/* Premium Bank Visual Widget */
+.digital-card { background: linear-gradient(135deg, #0056B3 0%, #002D62 100%); width: 100%; max-width: 340px; margin: 1.5rem auto; border-radius: 12px; padding: 1.5rem; text-align: left; color: #FFF; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1); overflow: hidden; }
+.digital-card::after { content: ''; position: absolute; right: -20px; bottom: -20px; width: 120px; height: 120px; background: rgba(255,255,255,0.05); border-radius: 50%; }
+.card-brand { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.wallet-name { font-weight: 800; font-size: 1.4rem; letter-spacing: 0.05em; color: #FFF; }
+.wallet-logo-sub { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.8; }
+.card-chip { width: 38px; height: 28px; background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%); border-radius: 4px; margin-bottom: 1.25rem; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2); }
+.card-number { font-size: 1.4rem; font-weight: 500; letter-spacing: 0.12em; font-family: monospace; margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+.card-holder { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.9; font-weight: 400; }
+.btn-copy-card { position: absolute; right: 1.5rem; bottom: 1.3rem; padding: 0.4rem 0.8rem; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); color: #FFF; font-size: 0.75rem; border-radius: 4px; cursor: pointer; font-family: 'Jost', sans-serif; transition: background 0.3s; z-index: 6; }
+.btn-copy-card:hover { background: rgba(255,255,255,0.35); }
+.copy-toast { display: none; background: rgba(0,0,0,0.8); color: #FFF; padding: 0.6rem 1.2rem; font-size: 0.85rem; border-radius: 20px; position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 200; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+/* Lokasi & Closing */
+.location-title { font-size: 2.2rem; color: var(--text-dark); margin: 0.3rem 0; }
+.address-text { font-size: 0.85rem; color: var(--text-mid); max-width: 440px; margin: 0 auto 1.5rem auto; padding: 0 0.5rem; }
+.map-wrapper { border-radius: 8px; overflow: hidden; border: 1px solid var(--rose-soft); box-shadow: 0 4px 15px rgba(0,0,0,0.02); height: 260px; }
+.map-wrapper iframe { height: 100%; width: 100%; }
+
+.closing-section { padding: 5rem 1.25rem 6rem 1.25rem; }
+.closing-thank { font-size: 0.9rem; color: var(--rose-soft); max-width: 420px; margin: 0 auto 2.5rem auto; font-weight: 200; }
+.closing-logo { font-size: 3rem; color: #FFF; margin-bottom: 0.3rem; }
+.keluarga { font-style: italic; font-size: 1.2rem; color: var(--gold-light); }
+.footer-credit { margin-top: 4.5rem; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem; font-size: 0.7rem; color: #8C6271; }
+
+/* Fixed Music Controls & Bottom Nav Bar */
+.music-control-btn { position: fixed; bottom: 85px; right: 15px; width: 42px; height: 42px; border-radius: 50%; background: rgba(41, 6, 20, 0.8); border: 1px solid var(--gold); color: var(--gold); font-size: 1.1rem; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 90; backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: all 0.3s; }
+.music-control-btn.paused { border-color: var(--rose-light); color: var(--rose-light); }
+.bottom-nav { position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%); width: calc(100% - 30px); max-width: 420px; height: 56px; background: rgba(66, 17, 35, 0.85); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 28px; display: flex; align-items: center; justify-content: space-around; padding: 0 8px; z-index: 95; box-shadow: 0 8px 25px rgba(0,0,0,0.3); transition: opacity 0.5s; }
+.bottom-nav.hidden, .music-control-btn.hidden { opacity: 0; pointer-events: none; }
+.nav-item { display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: var(--rose-light); width: 55px; height: 100%; transition: color 0.3s; }
+.nav-icon { font-size: 1rem; margin-bottom: 1px; opacity: 0.7; }
+.nav-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.nav-item.active { color: var(--gold-light); }
+.nav-item.active .nav-icon { opacity: 1; transform: translateY(-1px); }
+
+/* Scroll Animation Engine system */
+.reveal-up { opacity: 0; transform: translateY(25px); transition: opacity 1s var(--bezier-premium), transform 1s var(--bezier-premium); }
+.reveal-up.active { opacity: 1; transform: translateY(0); }
+.scroll-reveal { opacity: 0; transform: translateY(25px); will-change: transform, opacity; transition: opacity 1.1s var(--bezier-premium), transform 1.1s var(--bezier-premium); }
+.scroll-reveal.revealed { opacity: 1; transform: translateY(0); }
+.rd1 { transition-delay: 0.05s; } .rd2 { transition-delay: 0.1s; } .rd3 { transition-delay: 0.15s; } .rd4 { transition-delay: 0.2s; }
+
+@media (max-width: 380px) {
+    html { font-size: 14px; }
+    .opening-title, .hero-title { font-size: 2.5rem; }
+    .countdown-box { width: 60px; height: 60px; }
+}
